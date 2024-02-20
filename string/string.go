@@ -1,7 +1,6 @@
 package string
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -15,5 +14,5 @@ func KebabCase(s string) string {
 }
 
 func Pad(s string, i int) string {
-	fmt.Sprintf("%")
+	return ""
 }
