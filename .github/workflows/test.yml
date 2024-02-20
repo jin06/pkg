@@ -66,10 +66,9 @@ jobs:
         key: ${{ runner.os }}-go-${{hashFiles('**/go.sum')}}
         restore-keys: |
           ${{ runner.os }}-go-
-    - name: Unit Test
+    - name: Test
       run: | 
-        echo "mode: count" > coverage.out
-        go test -v -covermode=count -coverprofile=coverage.out ./...
+        go test -v -race -covermode=atomic -coverprofile=coverage.out ./...
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       env:
