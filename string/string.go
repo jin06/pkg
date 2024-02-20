@@ -1,6 +1,9 @@
 package string
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 // KebabCase Converts string to kebab case
 func KebabCase(s string) string {
@@ -9,4 +12,8 @@ func KebabCase(s string) string {
 		items[i] = strings.ToLower(items[i])
 	}
 	return strings.Join(items, "-")
+}
+
+func Pad(s string, i int) string {
+	fmt.Sprintf("%")
 }
