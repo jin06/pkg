@@ -70,10 +70,8 @@ jobs:
       run: | 
         echo "mode: count" > coverage.out
         go test -v -covermode=count -coverprofile=coverage.out ./...
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
       env:
         token: ${{ secrets.CODECOV_TOKEN }}
         slug: jin06/pkg
-      with:
-        flags: ${{ matrix.os }},go-${{ matrix.go }} 
