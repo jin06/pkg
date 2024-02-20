@@ -13,6 +13,6 @@ func KebabCase(s string) string {
 	return strings.Join(items, "-")
 }
 
-func Pad(s string, i int) string {
-	return ""
-}
+// func Pad(s string, i int) string {
+// 	return ""
+// }
