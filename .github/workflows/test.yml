@@ -39,7 +39,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         go: ["1.20", "1.21", "1.22"]
         include:
-          - os: unbuntu-latest
+          - os: ubuntu-latest
             go-build: ~/.cache/go-build
           - os: macos-latest
             go-build: ~/Library/Caches/go-build
