@@ -72,5 +72,8 @@ jobs:
         go test -v -covermode=count -coverprofile=coverage.out ./...
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
+      env:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: jin06/pkg
       with:
         flags: ${{ matrix.os }},go-${{ matrix.go }} 
