@@ -1,6 +1,6 @@
 # pkg
 
-[![Build Status](https://github.com/jin06/pkg/workflows/Test/badge.svg?branch=main)](https://github.com/jin06/pkg/actions/workflows/test.yml?query=branch%3Amain)
+[![Build Status](https://github.com/jin06/pkg/workflows/test.yml/badge.svg?branch=main)](https://github.com/jin06/pkg/actions/workflows/test.yml?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/jin06/pkg/graph/badge.svg?token=JMSO7Q0940)](https://codecov.io/gh/jin06/pkg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jin06/pkg)](https://goreportcard.com/report/github.com/jin06/pkg)
 [![GoDoc](https://pkg.go.dev/badge/github.com/jin06/pkg?status.svg)](https://pkg.go.dev/github.com/jin06/pkg?tab=doc)
