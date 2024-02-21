@@ -9,7 +9,3 @@ func isSlice(val any) bool {
 	}
 	return false
 }
-
-func test(val any) {
-
-}
