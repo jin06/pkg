@@ -9,13 +9,11 @@ func TestChunk(t *testing.T) {
 	var err error
 	// var source = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	var source = []any{1, 2, 3}
-	var dest [][]int
+	var dest [][]any
 	var sourceStrings = []string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
 	var destStrings [][]string
 
-	if err = Chunk(source, 3, dest); err != nil {
-		t.Error(err)
-	} else {
+	if dest = Chunk(source, 3); err != nil {
 		if len(dest) != 3 {
 			t.Fail()
 		} else {
@@ -25,7 +23,7 @@ func TestChunk(t *testing.T) {
 		}
 		t.Log(dest)
 	}
-	if err = Chunk(sourceStrings, 3, destStrings); err != nil {
+	if destStrings = Chunk(sourceStrings, 3); err != nil {
 		if len(destStrings) != 3 {
 			t.Fail()
 		} else {
