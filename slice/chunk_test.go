@@ -33,5 +33,4 @@ func TestChunk(t *testing.T) {
 		}
 		t.Log(destStrings)
 	}
-	ExampleChunk()
 }
