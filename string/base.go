@@ -1,29 +1,55 @@
 package string
 
-func isLetter(r byte) bool {
+func isLetter[T byte | rune](val T) bool {
+	return (val >= 'a' && val <= 'z') || (val >= 'A' && val <= 'Z')
+}
+
+func isUpper[T byte | rune](val T) bool {
+	return val >= 'A' && val <= 'Z'
+}
+
+func isLower[T byte | rune](val T) bool {
+	return val >= 'a' && val <= 'z'
+}
+
+func toUpper[T byte | rune](val T) T {
+	if isLower(val) {
+		return val - ('a' - 'A')
+	}
+	return val
+}
+
+func toLower[T byte | rune](val T) T {
+	if isUpper(val) {
+		return val + ('a' - 'A')
+	}
+	return val
+}
+
+func isLetterByte(r byte) bool {
 	return (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z')
 }
 
-func isUpper(r byte) bool {
+func isUpperByte(r byte) bool {
 	return r >= 'A' && r <= 'Z'
 }
 
-func isLower(r byte) bool {
+func isLowerByte(r byte) bool {
 	return r >= 'a' && r <= 'z'
 }
 
-func toUpper(r byte) byte {
-	if isLower(r) {
-		return r - ('a' - 'A')
+func toUpperByte(val byte) byte {
+	if isLowerByte(val) {
+		return val - ('a' - 'A')
 	}
-	return r
+	return val
 }
 
-func toLower(r byte) byte {
-	if isUpper(r) {
-		return r + ('a' - 'A')
+func toLowerByte(val byte) byte {
+	if isUpperByte(val) {
+		return val + ('a' - 'A')
 	}
-	return r
+	return val
 }
 
 func isLetterRune(r rune) bool {
