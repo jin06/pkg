@@ -24,12 +24,20 @@ func TestDrop(t *testing.T) {
 	if result4[len(result4)-1] != "bar" {
 		t.Error("drop end error result: ", result4)
 	}
+
+	result5 := Drop(arr3, -1)
+	if result5[len(result5)-1] != "bar" {
+		t.Error("drop -1 error result: ", result5)
+	}
 }
 
 func ExampleDrop() {
 	array := []int{1, 3, 4, 5}
-
 	fmt.Println(Drop(array, 1))
+
+	array2 := []string{"start", "foo", "bar", "end"}
+	fmt.Println(Drop(array2, -1))
 	// Output:
-	//[1 4 5]
+	// [1 4 5]
+	// [start foo bar]
 }
