@@ -38,8 +38,6 @@ func TestDifference(t *testing.T) {
 			t.Fail()
 		}
 	}()
-	ExampleDifference()
-
 }
 
 func ExampleDifference() {
