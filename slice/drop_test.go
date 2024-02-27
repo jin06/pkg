@@ -41,3 +41,48 @@ func ExampleDrop() {
 	// [1 4 5]
 	// [start foo bar]
 }
+
+func ExampleDropWhile() {
+	fn := func(i int) bool {
+		return i%2 == 1
+	}
+	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(DropWhile(array, fn))
+	type vehicle struct {
+		Brand string
+		Class string
+	}
+	fn2 := func(v vehicle) bool {
+		return v.Class == "suv" || v.Brand == "Ford"
+	}
+	array2 := []vehicle{
+		{
+			Brand: "Ford",
+			Class: "car",
+		},
+		{
+			Brand: "Ford",
+			Class: "suv",
+		},
+		{
+			Brand: "BMW",
+			Class: "suv",
+		},
+		{
+			Brand: "BMW",
+			Class: "car",
+		},
+		{
+			Brand: "Toyota",
+			Class: "car",
+		},
+		{
+			Brand: "Toyota",
+			Class: "mpv",
+		},
+	}
+	fmt.Println(DropWhile(array2, fn2))
+	//Output:
+	//[2 4 6 8]
+	//[{BMW car} {Toyota car} {Toyota mpv}]
+}
