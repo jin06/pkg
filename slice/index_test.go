@@ -18,3 +18,14 @@ func ExampleIndexOf() {
 	//5
 	//1
 }
+
+func ExampleLastIndexOf() {
+	arr1 := []int{2, 3, 2, 3, 1}
+	fmt.Println(LastIndexOf(arr1, 3, 0))
+	fmt.Println(LastIndexOf(arr1, 3, 2))
+	fmt.Println(LastIndexOf(arr1, 3, -3))
+	//Output:
+	//3
+	//1
+	//1
+}
