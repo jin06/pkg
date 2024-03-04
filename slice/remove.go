@@ -1,7 +1,7 @@
 package slice
 
 // Remove removes all given values from array.
-func Remove[T comparable](array []T, values []T) (result []T) {
+func Remove[T comparable](array []T, values ...T) (result []T) {
 	result = make([]T, 0)
 	for i := 0; i < len(array); i++ {
 		var have bool
