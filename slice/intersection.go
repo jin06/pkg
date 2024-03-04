@@ -2,7 +2,7 @@ package slice
 
 // Intersection
 // Creates an array of unique values that are included in all given arrays. The order and references of result values are determined by the first array.
-func Intersection[T comparable](arrays [][]T) (result []T) {
+func Intersection[T comparable](arrays ...[]T) (result []T) {
 	if len(arrays) < 2 {
 		return
 	}

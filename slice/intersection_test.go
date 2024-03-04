@@ -9,7 +9,7 @@ func ExampleIntersection() {
 		{3, 2, 1, 5},
 	}
 
-	fmt.Println(Intersection(arrays))
+	fmt.Println(Intersection(arrays...))
 	//Output:
 	//[2 5]
 }
