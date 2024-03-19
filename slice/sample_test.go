@@ -13,8 +13,6 @@ func ExampleSample() {
 func FuzzSample(f *testing.F) {
 	f.Fuzz(func(t *testing.T, array []byte, n int) {
 		res := Sample(array, n)
-		t.Log(n)
-		t.Log(res)
 		if len(array) == 0 {
 			if len(res) != 0 {
 				t.Error()

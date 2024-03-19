@@ -1,7 +1,6 @@
 package slice
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
@@ -19,7 +18,6 @@ func Sample[T any](array []T, n int) (result []T) {
 
 	for i := 0; i < n; i++ {
 		index := r.Intn(l)
-		fmt.Println(index)
 		result = append(result, array[index])
 	}
 	return
